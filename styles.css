@@ -1,0 +1,331 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('fundo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+header img {
+    transition: transform 0.3s ease;
+    /* Garante uma transição suave */
+}
+
+header img:hover {
+    transform: scale(1.1);
+    /* Aumenta a imagem em 10% */
+}
+
+
+#titleImage {
+    width: 8%;
+    /* diminui a imagem em 30% */
+    height: auto;
+    /* Mantém a proporção da imagem */
+    display: block;
+    /* Garante que a imagem seja exibida como um bloco */
+    margin: 0 auto;
+    /* Centraliza a imagem horizontalmente */
+    transition: transform 0.3s ease;
+    /* Suaviza a transição de transformações */
+}
+
+#titleImage:hover {
+    transform: scale(1.1);
+    /* Aumenta a imagem em 10% */
+}
+
+
+
+
+article {
+    background-color: #fff;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+article h2 {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+article p {
+    margin-top: 10px;
+}
+
+.mission-group {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin: 20px 5%;
+}
+
+.mission {
+    flex-grow: 1;
+    min-width: 200px;
+    max-width: 300px;
+    margin: 10px;
+    border: 2px solid transparent;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.mission-header {
+    font-size: 120%;
+    /* Aumentar a fonte em 15% */
+    padding: 10px;
+    background: #0099FF;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    text-shadow:
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+    /* Isto adiciona um efeito de contorno preto ao redor do texto */
+    /* Se você já possui outros estilos para .mission-header, apenas acrescente ou atualize os mencionados acima. */
+}
+
+.mission-content {
+    display: none;
+    padding: 10px;
+    pointer-events: none;
+
+}
+
+.mission-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mission-content li {
+    padding: 5px 0;
+    border-bottom: 1px dashed black;
+}
+
+
+.mission-group:nth-of-type(2) .mission .mission-header {
+    background-color: #FFA500;
+}
+
+.mission-group:nth-of-type(2) .mission {
+    background-color: rgba(255, 165, 0, 1);
+}
+
+.mission-group:nth-of-type(1) .mission .mission-header {
+    background-color: #0099FF;
+}
+
+.mission-group:nth-of-type(1) .mission {
+    background-color: rgba(0, 153, 255, 1);
+}
+
+
+.mission:hover {
+    border: 2px solid yellow;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+    /* Dá uma sensação de "levantar" o elemento ao passar o mouse */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* Adiciona uma transição suave */
+    filter: brightness(1.4);
+    /* Clareia o elemento em 20% */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+    /* Adiciona uma transição suave para o efeito de brilho */
+}
+
+.search-container {
+    text-align: center;
+    margin: 20px;
+}
+
+#searchInput,
+#searchButton {
+    height: 40px;
+    /* Definir a altura que você deseja */
+    box-sizing: border-box;
+    /* Isto garante que padding e borda são incluídos na altura */
+    border-radius: 5px;
+    /* Arredonda os cantos */
+}
+
+#searchInput {
+    padding-left: 10px;
+    /* Espaçamento interno à esquerda para o texto */
+    border: 1px solid #ccc;
+    /* Uma borda simples */
+    font-size: 16px;
+}
+
+#searchButton {
+    border: none;
+    /* Elimina a borda padrão do botão */
+    background-color: #6a00ff;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#searchButton:hover {
+    background-color: #0077CC;
+}
+
+
+.mission.non-matching .mission-header {
+    background-color: rgba(220, 220, 220, 0.8);
+}
+
+.mission-content-item.non-matching {
+    background-color: rgba(220, 220, 220, 0.8);
+}
+
+
+@media (max-width: 768px) {
+    .mission {
+        /* Estilos para telas menores aqui */
+        min-width: 100%;
+        margin: 5px 0;
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.whatsapp-link {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.whatsapp-link img {
+    height: 90px;
+    /* Ajuste conforme o tamanho desejado */
+    margin-right: 5px;
+    animation: pulse 2s infinite;
+    /* Aplica a animação 'pulse' */
+}
+
+.mission-group button {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: block;
+    /* Ocupa toda a largura disponível e fica na próxima linha */
+    margin-left: auto;
+    /* Centraliza o botão horizontalmente */
+    margin-right: auto;
+    max-width: 200px;
+    /* Largura máxima para o botão, pode ajustar conforme a necessidade */
+    transition: background-color 0.3s;
+    text-shadow:
+        -0.5px -0.5px 0 #000,
+        0.5px -0.5px 0 #000,
+        -0.5px 0.5px 0 #000,
+        0.5px 0.5px 0 #000;
+}
+
+.mission-group button:hover {
+    background-color: rgb(255, 100, 100);
+}
+
+.copy-button-wrapper {
+    flex-basis: 100%;
+    /* Faz com que ocupe toda a largura disponível, forçando o que estiver após a div a ir para a próxima linha */
+    text-align: center;
+    /* Centraliza o botão horizontalmente */
+}
+
+.mission-group button {
+    /* ... o resto do seu estilo para o botão ... */
+    display: inline-block;
+    /* Faz com que o botão seja tratado como um bloco, mas não ocupe toda a largura */
+}
+
+/* Estilos para dispositivos móveis */
+@media (max-width: 1200px) {
+    body {
+
+        .whatsapp-link img {
+            height: 40px;
+            /* Ajusta o tamanho da imagem do WhatsApp. Modifique conforme necessário. */
+        }
+
+        #titleImage {
+            width: 40%;
+            /* ou qualquer valor que você deseja para dispositivos móveis */
+        }
+    }
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.selection-box {
+    flex: 1;
+    background-color: #007BFF;
+    color: black;
+    text-align: center;
+    padding: 30px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 24px;
+    border: none;
+    outline: none;
+    margin: 0 10px;
+    /* Espaçamento entre as caixas */
+}
+
+.selection-box:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos adicionais para a página */
+.whatsapp-link {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}

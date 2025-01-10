@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDTank Brasil s11 - Missões Surpresas</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="titulo.jpg" type="image/jpeg">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6809594544652238"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <img id="titleImage" src="titulo.jpg" alt="titulo">
+    </header>
+
+
+    <div class="search-container">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar missão..." onkeyup="searchMission()">
+            <!-- Adicionado o evento onkeyup -->
+            <button id="searchButton" type="button" onclick="clearInput()">Limpar</button>
+            <!-- Adicionado type="button" -->
+        </div>
+
+
+
+
+    </div>
+
+
+    <!-- Listagem de missões -->
+    <section id="missoes">
+        <h1 class="mission-title"></h1>
+        <!-- Grupo de Missões 1 -->
+        <div class="mission-group">
+            <div class="mission">
+                <div class="mission-header" onclick="toggleMission(this.parentElement)"> Hallowen Brasil (23/10)
+                </div>
+                <div class="mission-content">
+                    <ul>
+                        <p><strong>(0/25)</strong> Combate <strong> Ganhar 25 </strong> Combates em
+                            <strong>CASAL</strong>
+                        </p>
+                        </li>
+                        <li>
+                            <p><strong>(0/1)</strong> <strong>BF</strong> - Bugou
+                                <strong>Fácil</strong>
+                            </p>
+                        </li>
+                        <li>
+                            <p><strong>(0/1)</strong> <strong>BN</strong> - Bugou
+                                <strong>Normal</strong>
+                            </p>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <!-- ... Repita para outras missões do Grupo 1 ... -->
+        </div>
+        <h1 class="mission-title"></h1>
+        <div class="mission-group">
+            <div class="mission">
+                <div class="mission-header" onclick="toggleMission(this.parentElement)"> Dia das Crianças
+                </div>
+                <div class="mission-content">
+                    <ul>
+                        <li>
+                            <p><strong>(0/5)</strong> <strong> CDN </strong> - Covíl Dragão
+                                <strong>Normal</strong>
+                            </p>
+                        <li>
+                            <p><strong>(0/5)</strong> <strong> BD </strong> - Bugou
+                                <strong>Difícil</strong>
+                            </p>
+                        <li>
+                            <p><strong>(0/50)</strong> GVG <strong> Ganhar 50</strong> Combates Guild Vs Guild </p>
+                        </li>
+                        <li>
+                            <p><strong>(0/10)</strong> <strong>FN</strong> - Formigueiro
+                                <strong>Normal</strong>
+                            </p>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+    <script>
+        function clearInput() {
+            document.getElementById("searchInput").value = "";
+            searchMission(); // Chame searchMission após limpar o input
+        }
+
+        function toggleMission(missionElement) {
+            const content = missionElement.querySelector('.mission-content');
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
+
+        function searchMission() {
+            const input = document.getElementById("searchInput");
+            const filter = input.value.toUpperCase();
+            const missions = document.querySelectorAll(".mission");
+        
+            for (const mission of missions) {
+                // Obter texto sem influência de tags internas como <strong>
+                let text = mission.innerText || mission.textContent;
+        
+                // Normalizar espaços múltiplos para um único espaço
+                text = text.toUpperCase().replace(/\s+/g, " ").trim();
+        
+                // Normalizar o filtro também
+                const normalizedFilter = filter.replace(/\s+/g, " ").trim();
+        
+                if (text.includes(normalizedFilter) || normalizedFilter === "") {
+                    mission.classList.remove("non-matching");
+        
+                    // Restaurando as cores originais
+                    const missionHeader = mission.querySelector(".mission-header");
+                    if (missionHeader) {
+                        missionHeader.style.backgroundColor = "";
+                    }
+                    mission.style.backgroundColor = "";
+                } else {
+                    mission.classList.add("non-matching");
+        
+                    // Alterando as cores para cinza
+                    const missionHeader = mission.querySelector(".mission-header");
+                    if (missionHeader) {
+                        missionHeader.style.backgroundColor = "rgba(220, 220, 220, 0.8)";
+                    }
+                    mission.style.backgroundColor = "rgba(220, 220, 220, 0.8)";
+                }
+            }
+        }
+              
+
+        function copyMissions(missionGroup) {
+            if (!missionGroup) {
+                console.error("Nenhum grupo de missões foi passado para a função.");
+                return;
+            }
+
+            let textToCopy = '';
+
+            // Para cada missão dentro do grupo
+            let missions = missionGroup.querySelectorAll('.mission');
+            if (!missions.length) {
+                console.error("Nenhuma missão encontrada no grupo.");
+                return;
+            }
+
+            missions.forEach((mission, index) => {
+                console.log(`Processando missão ${index + 1}`);
+
+                // Adiciona o título da missão (por exemplo, "Missão 1")
+                textToCopy += mission.querySelector('.mission-header').textContent.trim() + '\n';
+
+                // Para cada detalhe da missão
+                let details = mission.querySelectorAll('.mission-content li p');
+                if (!details.length) {
+                    console.error(`Nenhum detalhe encontrado para a missão ${index + 1}`);
+                    return;
+                }
+
+                details.forEach((detail) => {
+                    let cleanDetail = detail.textContent.trim();
+                    cleanDetail = cleanDetail.replace(/(\s*\n\s*)+/g, ' ');
+                    textToCopy += '- ' + cleanDetail + '\n';
+                });
+
+                textToCopy += '\n'; // Adiciona uma linha em branco entre as missões
+            });
+
+            // Copia o texto para a área de transferência
+            const textarea = document.createElement('textarea');
+            textarea.value = textToCopy;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
+
+            alert("Missões copiadas para a área de transferência!");
+            console.log("Missões copiadas para a área de transferência!")
+        }
+
+
+    </script>
+    <a href="https://chat.whatsapp.com/BYrWjjHtQUg8mX3JabGPw9" target="_blank" class="whatsapp-link">
+        <img src="whatsapp.jpg" alt="WhatsApp" />
+    </a>
+
+</body>
+
+</html>
+
+<div class="whatsapp-spacer"></div>
