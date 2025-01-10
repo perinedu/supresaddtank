@@ -322,12 +322,19 @@ body {
     right: 10px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 768px) {
+    .whatsapp-link img {
+        width: 70px; /* Define a largura do ícone */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
     .whatsapp-link {
-        top: 10px; /* Define a posição no topo da página */
-        right: 10px; /* Alinha o botão à direita */
+        top: 10px; /* Posiciona no topo */
+        left: 10px; /* Alinha à esquerda */
+        right: unset; /* Remove o alinhamento à direita */
         bottom: unset; /* Remove o posicionamento inferior */
-        position: absolute; /* Usa posição absoluta para colocá-lo ao lado do título */
-        z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+        position: absolute; /* Usa posição absoluta para posicionamento */
+        z-index: 1000; /* Garante que fique acima de outros elementos */
     }
 }
+
