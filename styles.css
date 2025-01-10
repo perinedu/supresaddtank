@@ -324,7 +324,7 @@ body {
 
 @media (max-width: 768px) {
     .whatsapp-link img {
-        width: 70px; /* Define a largura do ícone */
+        width: 100px; /* Define a largura do ícone */
         height: auto; /* Mantém a proporção da imagem */
     }
 
