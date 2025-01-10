@@ -322,7 +322,7 @@ body {
     right: 10px;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
     .whatsapp-link {
         top: 10px; /* Define a posição no topo da página */
         right: 10px; /* Alinha o botão à direita */
