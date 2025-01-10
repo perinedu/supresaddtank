@@ -336,5 +336,8 @@ body {
         position: absolute; /* Usa posição absoluta para posicionamento */
         z-index: 1000; /* Garante que fique acima de outros elementos */
     }
+    #titleImage {
+        margin-left: auto; /* Empurra o título para a direita */
+    }
 }
 
