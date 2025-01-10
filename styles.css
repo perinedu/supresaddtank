@@ -23,24 +23,16 @@ header img:hover {
 
 
 #titleImage {
-    width: 8%;
-    /* diminui a imagem em 30% */
-    height: auto;
-    /* Mantém a proporção da imagem */
-    display: block;
-    /* Garante que a imagem seja exibida como um bloco */
-    margin: 0 auto;
-    /* Centraliza a imagem horizontalmente */
-    transition: transform 0.3s ease;
-    /* Suaviza a transição de transformações */
+    width: 150px; /* Define um tamanho fixo para a largura */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block; /* Garante que a imagem seja exibida como um bloco */
+    margin: 0 auto; /* Centraliza a imagem horizontalmente */
+    transition: transform 0.3s ease; /* Suaviza a transição de transformações */
 }
 
 #titleImage:hover {
-    transform: scale(1.1);
-    /* Aumenta a imagem em 10% */
+    transform: scale(1.1); /* Aumenta a imagem em 10% ao passar o mouse */
 }
-
-
 
 
 article {
@@ -297,21 +289,7 @@ img {
     /* Faz com que o botão seja tratado como um bloco, mas não ocupe toda a largura */
 }
 
-/* Estilos para dispositivos móveis */
-@media (max-width: 1200px) {
-    body {
 
-        .whatsapp-link img {
-            height: 40px;
-            /* Ajusta o tamanho da imagem do WhatsApp. Modifique conforme necessário. */
-        }
-
-        #titleImage {
-            width: 40%;
-            /* ou qualquer valor que você deseja para dispositivos móveis */
-        }
-    }
-}
 
 body {
     margin: 0;
