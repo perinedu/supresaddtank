@@ -304,7 +304,16 @@
             console.log("Missões copiadas para a área de transferência!")
         }
 
+        function countVisitsInConsole() {
+            const visitCount = localStorage.getItem('visitCountConsole'); // Obtém o contador do LocalStorage
+            const newCount = visitCount ? parseInt(visitCount, 10) + 1 : 1; // Incrementa o contador ou inicia com 1
+            localStorage.setItem('visitCountConsole', newCount); // Atualiza o contador no LocalStorage
+            
+            console.log(`Visitas nesta página: ${newCount}`); // Exibe no console
+        }
 
+        // Executa a contagem ao carregar a página
+        countVisitsInConsole();
     </script>
     <a href="https://chat.whatsapp.com/BfOpJjgde1ODJmm0Z92Ano" target="_blank" class="whatsapp-link">
         <img src="whatsapp.jpg" alt="WhatsApp" />
