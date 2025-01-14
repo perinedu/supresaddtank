@@ -18,7 +18,7 @@
         <img id="titleImage" src="titulo.jpg" alt="titulo">
     </header>
 
-
+    
     <div class="search-container">
         <div class="search-container">
             <input type="text" id="searchInput" placeholder="Buscar missão..." onkeyup="searchMission()">
@@ -27,13 +27,67 @@
             <!-- Adicionado type="button" -->
         </div>
     </div>
-    <!-- Listagem de missões -->
-    <section id="missoes">
+
+        <!-- Listagem de missões -->
         <h1 class="mission-title"></h1>
+        <!-- MODELO GRUPO DE MISSÃO -->
         <div class="mission-group">
+            <div class="mission">
+                <div class="mission-header" onclick="toggleMission(this.parentElement)"> ▶︎ Janeiro A (29/01/2025)
+                </div>
+                <div class="mission-content">
+                    <ul>
+                        <li>
+                            <p><strong>(0/?) ? -</strong> Sem informações até o momento </p>
+                        </li>
+                        <li>
+                            <p><strong>(0/?) ? -</strong> Sem informações até o momento </p>
+                        </li>
+                        <li>
+                            <p><strong>(0/?) ? -</strong> Sem informações até o momento </p>
+                        </li>
+                        <li>
+                            <p><strong>(0/?) ? -</strong> Sem informações até o momento </p>
+                        </li>
+                        <li>
+                            <p><strong> Nos ajude a manter as informações atualizadas, caso saiba de alguma, compartilhe no grupo</strong> </p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- FIM MODELO MISSÃO -->
+            </div>
+            <!-- MODELO MISSÃO -->
             <!-- MODELO MISSÃO -->
             <div class="mission">
-                <div class="mission-header" onclick="toggleMission(this.parentElement)">(NOVA!) Surpresa (31/01/2025)
+                <div class="mission-header" onclick="toggleMission(this.parentElement)"> ▶︎ Janeiro B (29/01/2025)</div>
+                <div class="mission-content">
+                    <ul>
+                        <li>
+                            <p><strong>(0/?) ? -</strong> Sem informações até o momento </p>
+                        </li>
+                        <li>
+                            <p><strong>(0/?) ? -</strong> Sem informações até o momento </p>
+                        </li>
+                        <li>
+                            <p><strong>(0/60) SPA -</strong> 60 Minutos no SPA</p>
+                        </li>
+                        <li>
+                            <p><strong> Nos ajude a manter as informações atualizadas, caso saiba de alguma, compartilhe no grupo</strong> </p>
+                        </li>
+
+                    </ul>
+                </div>
+                <!-- MODELO MISSÃO -->
+
+            </div>
+            <!-- MODELO GRUPO DE MISSÃO -->
+        </div>
+    <!-- Listagem de missões -->
+        <h1 class="mission-title"></h1>
+        <!-- MODELO GRUPO DE MISSÃO -->
+        <div class="mission-group">
+            <div class="mission">
+                <div class="mission-header" onclick="toggleMission(this.parentElement)">Surpresa (31/01/2025)
                 </div>
                 <div class="mission-content">
                     <ul>
@@ -54,10 +108,6 @@
                 <!-- FIM MODELO MISSÃO -->
             </div>
             <!-- MODELO MISSÃO -->
-        </div>
-        <h1 class="mission-title"></h1>
-        <!-- MODELO GRUPO DE MISSÃO -->
-        <div class="mission-group">
             <!-- MODELO MISSÃO -->
             <div class="mission">
                 <div class="mission-header" onclick="toggleMission(this.parentElement)"> Surpresa I (27/01/2025)
