@@ -78,7 +78,7 @@ article p {
     /* Aumentar a fonte em 15% */
     padding: 10px;
     background: #003f69;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
     font-weight: bold;
     text-shadow:
@@ -110,19 +110,19 @@ article p {
 
 
 .mission-group:nth-of-type(2) .mission .mission-header {
-    background-color: #FFA500;
+    background-color: #8f000c; /* Verde */
 }
 
 .mission-group:nth-of-type(2) .mission {
-    background-color: rgba(255, 165, 0, 1);
+    background-color: rgba(255, 64, 64, 0.8); /* Verde com 80% de opacidade */
 }
 
-.mission-group:nth-of-type(1) .mission .mission-header {
+.mission-group:nth-of-type(0) .mission .mission-header {
     background-color: #0099FF;
 }
 
 .mission-group:nth-of-type(1) .mission {
-    background-color: rgba(0, 153, 255, 1);
+    background-color: hsl(204, 100%, 74%);
 }
 .mission-group:nth-of-type(3) .mission .mission-header {
     background-color: #007824; /* Vermelho */
@@ -133,11 +133,11 @@ article p {
 }
 
 .mission-group:nth-of-type(4) .mission .mission-header {
-    background-color: #8f000c; /* Verde */
+    background-color: #FFA500;
 }
 
 .mission-group:nth-of-type(4) .mission {
-    background-color: rgba(255, 64, 64, 0.8); /* Verde com 80% de opacidade */
+    background-color: rgb(225, 177, 86);
 }
 
 .mission:hover {
