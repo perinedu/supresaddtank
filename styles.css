@@ -15,6 +15,50 @@ header img {
     transition: transform 0.3s ease;
     /* Garante uma transição suave */
 }
+@keyframes fireEffect {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes fireEffect {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.new-badge {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    background: linear-gradient(45deg, 
+        #ff0 0%,      /* Amarelo fogo */
+        #ff8000 30%,  /* Laranja quente */
+        #ff4000 60%,  /* Vermelho fogo */
+        #ff8000 90%,  /* Laranja quente */
+        #ff0 100%     /* Amarelo fogo */
+    );
+    background-size: 200% 200%;
+    animation: fireEffect 2s linear infinite; /* Animação de fogo */
+    
+    color: white;
+    font-weight: 900; /* Ajuste para fonte extra negrito */
+    font-size: 12px;
+    font-family: Arial, sans-serif; /* Garante que seja uma fonte que suporta negrito */
+    letter-spacing: 1px; /* Melhora a legibilidade */
+    padding: 4px 8px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(255, 50, 0, 1), 
+                 0px 0px 6px rgba(255, 100, 0, 0.8); /* Brilho de fogo no texto */
+    box-shadow: 0px 0px 8px rgba(255, 100, 0, 1); /* Sombra brilhante ao redor */
+}
+
+.mission-header {
+    position: relative;
+    padding-left: 50px; /* Ajuste para não sobrepor o texto */
+}
+
 
 header img:hover {
     transform: scale(1.1);
@@ -109,20 +153,20 @@ article p {
 }
 
 
-.mission-group:nth-of-type(2) .mission .mission-header {
+.mission-group:nth-of-type(1) .mission .mission-header {
     background-color: #8f000c; /* Verde */
 }
 
-.mission-group:nth-of-type(2) .mission {
+.mission-group:nth-of-type(1) .mission {
     background-color: rgba(255, 64, 64, 0.8); /* Verde com 80% de opacidade */
 }
 
-.mission-group:nth-of-type(0) .mission .mission-header {
-    background-color: #0099FF;
+.mission-group:nth-of-type(2) .mission .mission-header {
+    background-color: #001690;
 }
 
-.mission-group:nth-of-type(1) .mission {
-    background-color: hsl(204, 100%, 74%);
+.mission-group:nth-of-type(2) .mission {
+    background-color: #0067ac;
 }
 .mission-group:nth-of-type(3) .mission .mission-header {
     background-color: #007824; /* Vermelho */
