@@ -1,387 +1,310 @@
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url('fundo.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-}
+<!DOCTYPE html>
+<html lang="pt-br">
 
-header img {
-    transition: transform 0.3s ease;
-    /* Garante uma transição suave */
-}
-@keyframes fireEffect {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DDTank Brasil s12 - Missões Surpresas</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="titulo.jpg" type="image/jpeg">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6809594544652238"
+        crossorigin="anonymous"></script>
 
-@keyframes fireEffect {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
+</head>
 
-.new-badge {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    background: linear-gradient(45deg, 
-        #ff0 0%,      /* Amarelo fogo */
-        #ff8000 30%,  /* Laranja quente */
-        #ff4000 60%,  /* Vermelho fogo */
-        #ff8000 90%,  /* Laranja quente */
-        #ff0 100%     /* Amarelo fogo */
-    );
-    background-size: 200% 200%;
-    animation: fireEffect 2s linear infinite; /* Animação de fogo */
+<body>
+    <header>
+        <img id="titleImage" src="titulo.jpg" alt="titulo">
+    </header>
+
     
-    color: white;
-    font-weight: 900; /* Ajuste para fonte extra negrito */
-    font-size: 12px;
-    font-family: Arial, sans-serif; /* Garante que seja uma fonte que suporta negrito */
-    letter-spacing: 1px; /* Melhora a legibilidade */
-    padding: 4px 8px;
-    border-radius: 5px;
-    text-transform: uppercase;
-    text-shadow: 2px 2px 4px rgba(255, 50, 0, 1), 
-                 0px 0px 6px rgba(255, 100, 0, 0.8); /* Brilho de fogo no texto */
-    box-shadow: 0px 0px 8px rgba(255, 100, 0, 1); /* Sombra brilhante ao redor */
-}
+    <div class="search-container">
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Buscar missão..." onkeyup="searchMission()">
+            <!-- Adicionado o evento onkeyup -->
+            <button id="searchButton" type="button" onclick="clearInput()">Limpar</button>
+            <!-- Adicionado type="button" -->
+        </div>
+    </div>
+    <div class="mission-group">
+        <div class="mission">
+            <div class="mission-header" onclick="toggleMission(this.parentElement)">
+                <span class="new-badge">NEW</span> Fevereiro I (16/02)
+            </div>
+           
+            <div class="mission-content">
+                <ul>
+                    <li>
+                        <p><strong>(0/?) Sem Informações</strong></p>
+                    </li>
+                    <li>
+                        <p><strong>(0/?) PD -</strong> Galinheiro Difícil</p>
+                    </li>
+                    <li>
+                        <p><strong>(0/?) Sem Informações</strong></p>
+                    </li>
+                    <li>
+                        <p><strong>(0/?) Sem Informações</strong></p>
+                    </li>
+                    <li>
+                        <p><strong>Caso descubra alguma, compartilhe conosco no grupo para atualizarmos.</strong></p>
+                    </li>
+                </ul>
+            </div>
+            <!-- FIM MODELO MISSÃO -->
+        </div>
+        <div class="mission">
+            <div class="mission-header" onclick="toggleMission(this.parentElement)">
+                <span class="new-badge">NEW</span> Fevereiro II (16/02)
+            </div>
+            <div class="mission-content">
+                <ul>
+                    <li>
+                        <p><strong>(0/?) Sem Informações</strong></p>
+                    </li>
+                    <li>
+                        <p><strong>(0/?) Sem Informações</strong></p>
+                    </li>
+                    <li>
+                        <p><strong>(0/?) Sem Informações</strong></p>
+                    </li>
+                    <li>
+                        <p><strong>Caso descubra alguma, compartilhe conosco no grupo para atualizarmos.</strong></p>
+                    </li>
+                </ul>
+            </div>
+            <!-- FIM MODELO MISSÃO -->
+        </div>
+    </div>
+    <div class="mission-group">
+        <div class="mission">
+            <div class="mission-header" onclick="toggleMission(this.parentElement)">Isso ou Aquilo (A) (18/02)
+            </div>
+            <div class="mission-content">
+                <ul>
+                    <li>
+                        <p><strong>(0/7) GVG 4X4 -</strong> ir GvG 4x4 </p>
+                    </li>
+                    <li>
+                        <p><strong>(0/3) PN -</strong> Galinheiro Normal</p>
+                    </li>
+                    <li>
+                         <p><strong>(0/1) OBD -</strong> Olimpíadas Boom Difícil</p>
+                    </li>
+                    <li>
+                        <p><strong>(0/15) Matar GvG -</strong> Matar 15 no GvG (Está contando 2 a cada kill) </p>
+                    </li>
+                </ul>
+            </div>
+            <!-- FIM MODELO MISSÃO -->
+        </div>
+        <div class="mission">
+            <div class="mission-header" onclick="toggleMission(this.parentElement)">Isso ou Aquilo (B) (18/02)
+            </div>
+            <div class="mission-content">
+                <ul>
+                    <li>
+                        <p><strong>(0/3) TPN -</strong> Tribo Piatan Normal</p>
+                    </li>
+                    <li>
+                        <p><strong>(0/3) GVG 3x3 -</strong> Ir 3 partidas 3x3 GVG </p>
+                    </li>
+                    <li>
+                        <p><strong>(0/10) PVP Equilibrado-</strong> Ganhar 10 PVP's Equilibrados</p>
+                    </li>
+                    <li>
+                        <p><strong>(0/60) SPA -</strong> 60 Minutos no SPA</p>
+                    </li>
+                </ul>
+            </div>
+            <!-- FIM MODELO MISSÃO -->
+        </div>
+        <div class="mission">
+            <div class="mission-header" onclick="toggleMission(this.parentElement)">Isso ou Aquilo (C) (18/02)
+            </div>
+            <div class="mission-content">
+                <ul>
+                    <li>
+                        <p><strong>(0/15) Partidas Casal -</strong> Ir 15 Partidas de Casal </p>
+                    </li>
+                    <li>
+                        <p><strong>(0/5) PF -</strong> Galinheiro Fácil</p>
+                    </li>
+                    <li>
+                        <p><strong>(0/5) BD -</strong> Bugou Difícil</p>
+                    </li>
+                    <li>
+                        <p><strong>(0/20) Matar GvG -</strong> Matar 20 no GvG (Está contando 2 a cada kill) </p>
+                    </li>
+                </ul>
+            </div>
+            <!-- FIM MODELO MISSÃO -->
+        </div>
+    </div>
+        <div class="mission-group">
+            <div class="mission">
+                <div class="mission-header" onclick="toggleMission(this.parentElement)">Supresa Certa (14/02)
+                </div>
+                <div class="mission-content">
+                    <ul>
+                        <li>
+                            <p><strong>(0/3) BD -</strong> Bugou Difícil</p>
+                        </li>
+                        <li>
+                            <p><strong>(0/5) TPN -</strong> Tribo Piatan Normal</p>
+                        </li>
+                        <li>
+                            <p><strong>(0/7) GVG 3x3 -</strong> Ir 7 partidas 3x3 GVG </p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- FIM MODELO MISSÃO -->
+            </div>
+            <div class="mission">
+                <div class="mission-header" onclick="toggleMission(this.parentElement)">Concha (21/02)
+                </div>
+                <div class="mission-content">
+                    <ul>
+                        <li>
+                            <p><strong>(0/5) OBN -</strong> Olimpíadas Boom Normal</p>
+                        </li>
+                        <li>
+                            <p><strong>(0/5) OBD -</strong> Olimpíadas Boom Difícil</p>
+                        </li>
+                        <li>
+                            <p><strong>(0/10) Ganhar com 1 de Life -</strong> No momento da vitória você deve estar com 1 de vida</p>
+                        </li>
+                        <li>
+                            <p><strong>(0/7) GVG -</strong> Ir 7 Gvg's</p>
+                        </li>
+                    </ul>
+                </div>
+                <!-- FIM MODELO MISSÃO -->
+            </div>
+        </div>
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+    </section>
 
-.mission-header {
-    position: relative;
-    padding-left: 50px; /* Ajuste para não sobrepor o texto */
-}
+    <script src="script.js"></script>
 
+    <script>
+        function clearInput() {
+            document.getElementById("searchInput").value = "";
+            searchMission(); // Chame searchMission após limpar o input
+        }
 
-header img:hover {
-    transform: scale(1.1);
-    /* Aumenta a imagem em 10% */
-}
+        function toggleMission(missionElement) {
+            const content = missionElement.querySelector('.mission-content');
+            if (content.style.display === "none" || content.style.display === "") {
+                content.style.display = "block";
+            } else {
+                content.style.display = "none";
+            }
+        }
 
+        function searchMission() {
+            const input = document.getElementById("searchInput");
+            const filter = input.value.toUpperCase(); // Busca em maiúsculas para comparação
+            const missions = document.querySelectorAll(".mission");
 
-#titleImage {
-    width: 150px; /* Define um tamanho fixo para a largura */
-    height: auto; /* Mantém a proporção da imagem */
-    display: block; /* Garante que a imagem seja exibida como um bloco */
-    margin: 0 auto; /* Centraliza a imagem horizontalmente */
-    transition: transform 0.3s ease; /* Suaviza a transição de transformações */
-}
+            for (const mission of missions) {
+                const text = mission.textContent || mission.innerText; // Texto completo do item
+                const trimmedText = text.toUpperCase().trim(); // Remove espaços extras para comparação precisa
 
-#titleImage:hover {
-    transform: scale(1.1); /* Aumenta a imagem em 10% ao passar o mouse */
-}
+                // Comparação literal com espaços considerados
+                if (trimmedText.includes(filter) || filter === "") {
+                    mission.classList.remove("non-matching");
 
+                    // Restaurando as cores originais
+                    const missionHeader = mission.querySelector(".mission-header");
+                    if (missionHeader) {
+                        missionHeader.style.backgroundColor = "";
+                    }
+                    mission.style.backgroundColor = "";
+                } else {
+                    mission.classList.add("non-matching");
 
-article {
-    background-color: #fff;
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+                    // Alterando as cores para cinza
+                    const missionHeader = mission.querySelector(".mission-header");
+                    if (missionHeader) {
+                        missionHeader.style.backgroundColor = "rgba(220, 220, 220, 0.8)";
+                    }
+                    mission.style.backgroundColor = "rgba(220, 220, 220, 0.8)";
+                }
+            }
+        }
 
-article h2 {
-    margin: 0;
-    font-size: 1.5em;
-}
+        function copyMissions(missionGroup) {
+            if (!missionGroup) {
+                console.error("Nenhum grupo de missões foi passado para a função.");
+                return;
+            }
 
-article p {
-    margin-top: 10px;
-}
+            let textToCopy = '';
 
-.mission-group {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    margin: 20px 5%;
-}
+            // Para cada missão dentro do grupo
+            let missions = missionGroup.querySelectorAll('.mission');
+            if (!missions.length) {
+                console.error("Nenhuma missão encontrada no grupo.");
+                return;
+            }
 
-.mission {
-    flex-grow: 1;
-    min-width: 200px;
-    max-width: 300px;
-    margin: 10px;
-    border: 2px solid transparent;
-    background: rgba(255, 255, 255, 0.7);
-    cursor: pointer;
-    height: auto;
-    overflow: hidden;
-    border-radius: 10px;
-}
+            missions.forEach((mission, index) => {
+                console.log(`Processando missão ${index + 1}`);
 
-.mission-header {
-    font-size: 120%;
-    /* Aumentar a fonte em 15% */
-    padding: 10px;
-    background: #003f69;
-    color: rgb(255, 255, 255);
-    text-align: center;
-    font-weight: bold;
-    text-shadow:
-        -1px -1px 0 #000,
-        1px -1px 0 #000,
-        -1px 1px 0 #000,
-        1px 1px 0 #000;
-    /* Isto adiciona um efeito de contorno preto ao redor do texto */
-    /* Se você já possui outros estilos para .mission-header, apenas acrescente ou atualize os mencionados acima. */
-}
+                // Adiciona o título da missão (por exemplo, "Missão 1")
+                textToCopy += mission.querySelector('.mission-header').textContent.trim() + '\n';
 
-.mission-content {
-    display: none;
-    padding: 10px;
-    pointer-events: none;
+                // Para cada detalhe da missão
+                let details = mission.querySelectorAll('.mission-content li p');
+                if (!details.length) {
+                    console.error(`Nenhum detalhe encontrado para a missão ${index + 1}`);
+                    return;
+                }
 
-}
+                details.forEach((detail) => {
+                    let cleanDetail = detail.textContent.trim();
+                    cleanDetail = cleanDetail.replace(/(\s*\n\s*)+/g, ' ');
+                    textToCopy += '- ' + cleanDetail + '\n';
+                });
 
-.mission-content ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
+                textToCopy += '\n'; // Adiciona uma linha em branco entre as missões
+            });
 
-.mission-content li {
-    padding: 5px 0;
-    border-bottom: 1px dashed black;
-}
+            // Copia o texto para a área de transferência
+            const textarea = document.createElement('textarea');
+            textarea.value = textToCopy;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand('copy');
+            document.body.removeChild(textarea);
 
+            alert("Missões copiadas para a área de transferência!");
+            console.log("Missões copiadas para a área de transferência!")
+        }
 
-.mission-group:nth-of-type(1) .mission .mission-header {
-    background-color: #8f000c; /* Verde */
-}
+        function countVisitsInConsole() {
+            const visitCount = localStorage.getItem('visitCountConsole'); // Obtém o contador do LocalStorage
+            const newCount = visitCount ? parseInt(visitCount, 10) + 1 : 1; // Incrementa o contador ou inicia com 1
+            localStorage.setItem('visitCountConsole', newCount); // Atualiza o contador no LocalStorage
+            
+            console.log(`Visitas nesta página: ${newCount}`); // Exibe no console
+        }
 
-.mission-group:nth-of-type(1) .mission {
-    background-color: rgba(255, 64, 64, 0.8); /* Verde com 80% de opacidade */
-}
+        // Executa a contagem ao carregar a página
+        countVisitsInConsole();
+    </script>
+    <a href="https://chat.whatsapp.com/BfOpJjgde1ODJmm0Z92Ano" target="_blank" class="whatsapp-link">
+        <img src="whatsapp.jpg" alt="WhatsApp" />
+    </a>
 
-.mission-group:nth-of-type(2) .mission .mission-header {
-    background-color: #001690;
-}
+</body>
 
-.mission-group:nth-of-type(2) .mission {
-    background-color: #0067ac;
-}
-.mission-group:nth-of-type(3) .mission .mission-header {
-    background-color: #007824; /* Vermelho */
-}
+</html>
 
-.mission-group:nth-of-type(3) .mission {
-    background-color: rgba(14, 247, 53, 0.8); /* Vermelho com 80% de opacidade */
-}
-
-.mission-group:nth-of-type(4) .mission .mission-header {
-    background-color: #FFA500;
-}
-
-.mission-group:nth-of-type(4) .mission {
-    background-color: rgb(225, 177, 86);
-}
-
-.mission:hover {
-    border: 2px solid yellow;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transform: translateY(-4px);
-    /* Dá uma sensação de "levantar" o elemento ao passar o mouse */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* Adiciona uma transição suave */
-    filter: brightness(1.4);
-    /* Clareia o elemento em 20% */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-    /* Adiciona uma transição suave para o efeito de brilho */
-}
-
-.search-container {
-    text-align: center;
-    margin: 20px;
-}
-
-#searchInput,
-#searchButton {
-    height: 40px;
-    /* Definir a altura que você deseja */
-    box-sizing: border-box;
-    /* Isto garante que padding e borda são incluídos na altura */
-    border-radius: 5px;
-    /* Arredonda os cantos */
-}
-
-#searchInput {
-    padding-left: 10px;
-    /* Espaçamento interno à esquerda para o texto */
-    border: 1px solid #ccc;
-    /* Uma borda simples */
-    font-size: 16px;
-}
-
-#searchButton {
-    border: none;
-    /* Elimina a borda padrão do botão */
-    background-color: #6a00ff;
-    color: #ffffff;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-#searchButton:hover {
-    background-color: #0077CC;
-}
-
-
-.mission.non-matching .mission-header {
-    background-color: rgba(220, 220, 220, 0.8);
-}
-
-.mission-content-item.non-matching {
-    background-color: rgba(220, 220, 220, 0.8);
-}
-
-
-@media (max-width: 768px) {
-    .mission {
-        /* Estilos para telas menores aqui */
-        min-width: 100%;
-        margin: 5px 0;
-    }
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.15);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-
-.whatsapp-link {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    border-radius: 20px;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-}
-
-.whatsapp-link img {
-    height: 90px;
-    /* Ajuste conforme o tamanho desejado */
-    margin-right: 5px;
-    animation: pulse 2s infinite;
-    /* Aplica a animação 'pulse' */
-}
-
-.mission-group button {
-    background-color: rgb(255, 0, 0);
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: block;
-    /* Ocupa toda a largura disponível e fica na próxima linha */
-    margin-left: auto;
-    /* Centraliza o botão horizontalmente */
-    margin-right: auto;
-    max-width: 200px;
-    /* Largura máxima para o botão, pode ajustar conforme a necessidade */
-    transition: background-color 0.3s;
-    text-shadow:
-        -0.5px -0.5px 0 #000,
-        0.5px -0.5px 0 #000,
-        -0.5px 0.5px 0 #000,
-        0.5px 0.5px 0 #000;
-}
-
-.mission-group button:hover {
-    background-color: rgb(255, 100, 100);
-}
-
-.copy-button-wrapper {
-    flex-basis: 100%;
-    /* Faz com que ocupe toda a largura disponível, forçando o que estiver após a div a ir para a próxima linha */
-    text-align: center;
-    /* Centraliza o botão horizontalmente */
-}
-
-.mission-group button {
-    /* ... o resto do seu estilo para o botão ... */
-    display: inline-block;
-    /* Faz com que o botão seja tratado como um bloco, mas não ocupe toda a largura */
-}
-
-
-
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-.selection-box {
-    flex: 1;
-    background-color: #007BFF;
-    color: black;
-    text-align: center;
-    padding: 30px 0;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 24px;
-    border: none;
-    outline: none;
-    margin: 0 10px;
-    /* Espaçamento entre as caixas */
-}
-
-.selection-box:hover {
-    background-color: #0056b3;
-}
-
-/* Estilos adicionais para a página */
-.whatsapp-link {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-}
-
-@media (max-width: 768px) {
-    .whatsapp-link img {
-        width: 100px; /* Define a largura do ícone */
-        height: auto; /* Mantém a proporção da imagem */
-    }
-
-    .whatsapp-link {
-        top: 30px; /* Posiciona no topo */
-        left: 2px; /* Alinha à esquerda */
-        right: unset; /* Remove o alinhamento à direita */
-        bottom: unset; /* Remove o posicionamento inferior */
-        position: absolute; /* Usa posição absoluta para posicionamento */
-        z-index: 1000; /* Garante que fique acima de outros elementos */
-    }
-    #titleImage {
-        margin-left: auto; /* Empurra o título para a direita */
-    }
-}
-
+<div class="whatsapp-spacer"></div>
