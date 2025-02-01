@@ -284,13 +284,19 @@ img {
     align-items: center;
 }
 
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-3px); }
+    50% { transform: translateX(3px); }
+    75% { transform: translateX(-3px); }
+    100% { transform: translateX(0); }
+}
+
 .whatsapp-link img {
     height: 90px;
-    /* Ajuste conforme o tamanho desejado */
-    margin-right: 5px;
-    animation: pulse 2s infinite;
-    /* Aplica a animação 'pulse' */
+    animation: shake 1.5s infinite ease-in-out;
 }
+
 
 .mission-group button {
     background-color: rgb(255, 0, 0);
