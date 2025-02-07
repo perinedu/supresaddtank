@@ -153,12 +153,12 @@ article p {
 }
 
 
-.mission-group:nth-of-type(1) .mission .mission-header {
-    background-color: #8f000c; /* Verde */
+.mission-group:nth-of-type(5) .mission .mission-header {
+    background-color: #8f000c; /* Vermelho */
 }
 
-.mission-group:nth-of-type(1) .mission {
-    background-color: rgba(255, 64, 64, 0.8); /* Verde com 80% de opacidade */
+.mission-group:nth-of-type(5) .mission {
+    background-color: rgba(255, 64, 64, 0.8); /* Vermelho com 80% de opacidade */
 }
 
 .mission-group:nth-of-type(2) .mission .mission-header {
@@ -295,35 +295,6 @@ img {
 .whatsapp-link img {
     height: 90px;
     animation: shake 1.5s infinite ease-in-out;
-}
-
-
-.mission-group button {
-    background-color: rgb(255, 0, 0);
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: block;
-    /* Ocupa toda a largura disponível e fica na próxima linha */
-    margin-left: auto;
-    /* Centraliza o botão horizontalmente */
-    margin-right: auto;
-    max-width: 200px;
-    /* Largura máxima para o botão, pode ajustar conforme a necessidade */
-    transition: background-color 0.3s;
-    text-shadow:
-        -0.5px -0.5px 0 #000,
-        0.5px -0.5px 0 #000,
-        -0.5px 0.5px 0 #000,
-        0.5px 0.5px 0 #000;
-}
-
-.mission-group button:hover {
-    background-color: rgb(255, 100, 100);
 }
 
 .copy-button-wrapper {
