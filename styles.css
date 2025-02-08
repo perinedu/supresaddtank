@@ -65,6 +65,15 @@ header img:hover {
     /* Aumenta a imagem em 10% */
 }
 
+.destaque-branco p {
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    position: relative;
+    display: inline-block;
+}
+
 
 #titleImage {
     width: 150px; /* Define um tamanho fixo para a largura */
