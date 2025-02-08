@@ -168,12 +168,21 @@ article p {
 .mission-group:nth-of-type(2) .mission {
     background-color: #0067ac;
 }
-.mission-group:nth-of-type(3) .mission .mission-header {
+
+.mission-group:nth-of-type(6) .mission .mission-header {
     background-color: #007824; /* Vermelho */
 }
 
-.mission-group:nth-of-type(3) .mission {
+.mission-group:nth-of-type(6) .mission {
     background-color: rgba(14, 247, 53, 0.8); /* Vermelho com 80% de opacidade */
+}
+
+.mission-group:nth-of-type(3) .mission .mission-header {
+    background-color: #001690;
+}
+
+.mission-group:nth-of-type(3) .mission {
+    background-color: #0067ac;
 }
 
 .mission-group:nth-of-type(4) .mission .mission-header {
@@ -183,6 +192,17 @@ article p {
 .mission-group:nth-of-type(4) .mission {
     background-color: rgb(225, 177, 86);
 }
+
+.mission-group:nth-of-type(7) .mission .mission-header {
+    background-color: #A0005E; /* Magenta escuro */
+}
+
+.mission-group:nth-of-type(7) .mission {
+    background-color: rgba(255, 20, 147, 0.8); /* Magenta vibrante com 80% de opacidade */
+}
+
+
+
 
 .mission:hover {
     border: 2px solid yellow;
